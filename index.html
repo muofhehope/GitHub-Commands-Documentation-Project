@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Github commands</title>
+</head>
+<body>
+    <h1>Github commands</h1>
+    <div id="return" class="wrapper">
+        <div class="container">
+             <a  href="#git-commit">
+                <svg height="150" width="140">
+                    <image class="svg" height="150" width="100%" href="./images/git-commit(1).svg" />
+                  </svg> 
+                <h2>
+                    Git commit
+                </h2>
+           </a>
+        </div>
+
+
+        <div class="container">
+            <a href="#git-merge">
+                <svg height="150" width="140">
+                    <image class="svg" height="150" width="100%" href="./images/git-merge.svg" />
+                  </svg> 
+                    <h2>
+                        Git merge
+                    </h2>
+            </a>
+        </div>
+
+
+        <div class="container">
+            <a href="#git-compare">
+                <svg height="150" width="140">
+                    <image class="svg" height="150" width="100%" href="./images/git-compare.svg" />
+                  </svg> 
+                    <h2>
+                        Git compare
+                    </h2>
+            </a>
+        </div>
+
+
+        <div class="container">
+            <a href="#git-branch">
+                <svg height="150" width="140">
+                    <image class="svg" height="150" width="90%" href="./images/git-branch-01.svg" />
+                  </svg> 
+                    <h2>
+                        Git branch
+                    </h2>
+            </a>
+        </div>
+
+
+        <div class="container">
+            <a href="#git-fork">
+                <svg height="150" width="140">
+                    <image class="svg" height="150" width="100%" href="./images/git-fork.svg" />
+                  </svg> 
+                <h2>
+                    Git fork
+                </h2>
+           </a>
+        </div>
+
+
+        <div class="container">
+            <a href="#git-push">
+                <svg height="150" width="140">
+                    <image class="svg" height="150" width="90%" href="./images/git-push.svg" />
+                  </svg> 
+                <h2>
+                    Git push
+                </h2>
+           </a>
+        </div>
+
+
+        <div class="container">
+            <a href="#git-branch-plus">
+                <svg height="150" width="140">
+                    <image class="svg" height="150" width="100%" href="./images/git-branch-plus.svg" />
+               </svg> 
+                <h2>
+                    Git branch-plus
+              </h2>
+         </a>
+        </div>
+
+
+        <div class="container">
+            <a href="#git-pull">
+                <svg height="150" width="140">
+                    <image class="svg" height="150" width="100%" href="./images/icons8-pull-request-96.png" />
+               </svg> 
+                <h2>
+                    Git Pull request
+              </h2>
+         </a>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div id="git-commit" class="container">
+            <h3>
+                A Git Commit:
+            </h3>
+            <p>
+                Saves your changes to the local Git repository as a new version in the project's history.
+            <h3>
+                How Do I Commit?
+            </h3>
+            <h4>
+               After you've entered a message, save the file and close the editor to create the actual commit.
+            </h4>
+            <div class="span">
+                <ol>
+                    <li>git commit -a.</li>
+                     <li>git commit -m "commit message"</li>
+                      <li>git commit -am "commit message"</li>
+                       <li>git commit --amend.</li>
+                </ol>
+            </div>
+            <h4>
+                Here are some examples of how to use the git commit command: Basic commit with a message.
+            </h4>
+            <div class="span">
+                git commit -m "Fix: Resolve issue with user authentication"
+            </div>
+            <div class="span">
+                git commit -a -m "initial commit"
+            </div>
+            <h3>
+                 What Git commit Really Does:
+            </h3>
+            <p>
+                Git commit is a command in Git that saves a snapshot of your changes to the local repository. It marks a specific point in your project's history that you can go back to later.
+                Think of it like saving a version of your project with a message describing what changed and why.
+            </p>
+            <a class="return" href="#top">
+                 <button type="button">
+                    Back to top
+                 </button>
+            </a> 
+           </div>
+
+
+        <div id="git-fork" class="container">
+            <h3>
+                Git Fork:
+            </h3>
+            <p>
+                A fork is a personal copy of someone else's repository that lives on your GitHub account. It lets you freely experiment with changes without affecting the original project (called the "upstream" repo).
+            </p>
+            <h3>
+                Typical Fork Workflow (Syntax Style)
+            </h3>
+            <h4>
+                Step 1: Fork on GitHub
+            </h4>
+            <p>
+                Do this through the GitHub interface:
+            </p>
+            <ul>
+                <li>Go to the repo you want to fork (e.g., <a href="https://github.com/original/repo">https://github.com/original/repo</a>)</li>
+                <li>Click the "Fork" button in the top-right corner</li>
+            </ul>
+            <h4>
+                This Create:
+            </h4>
+            <div class="span">
+                https://github.com/yourusername/repo
+            </div>
+            <h4>
+                Step 2: Clone Your Fork
+            </h4>
+            <div class="span">
+                git clone https://github.com/yourusername/repo.gitcd repo
+            </div>
+            <h4>
+                Step 3: Add the Original Repo as a Remote
+            </h4>
+            <div class="span">
+                git remote add upstream https://github.com/original/repo.git
+            </div>
+            <ul>
+                <li>origin = your fork (on your GitHub)</li>
+                <li>upstream = the original repo (where you forked from)</li>
+            </ul>
+            <h4>
+               Step 4: Sync with the Original Repo
+            </h4>
+            <p>
+                To get new changes from the original project:
+            </p>
+            <div class="span">
+                <ol>
+                 <li>git fetch upstream</li>
+                 <li>git checkout main</li>
+                 <li>git merge upstream/main</li>
+                </ol>
+            </div>
+            <p>
+               Or if the original repo uses master:
+            </p>
+            <div class="span">
+                <ol>
+                 <li>git fetch upstream</li>
+                 <li>git checkout master</li>
+                 <li>git merge upstream/main</li>
+                </ol>
+            </div>
+            <h4>
+                Step 5: Push Changes to Your Fork
+            </h4>
+            <div class="span">
+                git push origin main
+            </div>
+            <h3>
+                Conceptual Definition
+            </h3>
+            <p>
+                A fork is a personal copy of someone else’s Git repository. It allows you to freely experiment with changes without affecting the original project. Forking is primarily a feature of Git hosting platforms like GitHub, GitLab, or Bitbucket — not something built directly into Git itself.
+            </p>
+           <a class="return" href="#top">
+                 <button type="button">
+                    Back to top
+                 </button>
+            </a> 
+        </div>
+
+
+        <div id="git-merge" class="container">
+            <h3>
+                Git Merge:
+            </h3>
+            <p>When you’re working on a project with multiple branches (for features, bug fixes, experiments, etc.), you’ll eventually want to bring those changes back together. git merge lets you do that safely, preserving the history of both branches.</p>
+            <h3>Steps to Use git merge:</h3>
+            <h4>
+                1. Switch to the main branch
+            </h4>
+             <div class="span">
+                git checkout main
+            </div>
+            <h4>
+                2. Make sure main is up to date
+            </h4>
+             <div class="span">
+                git pull
+            </div>
+            <h4>
+                3. Merge the feature branch into main
+            </h4>
+             <div class="span">
+                git merge feature
+            </div>
+            <p>This command applies the changes from feature to main.</p>
+             <h3>What Is A Git merge?</h3>
+            <p>
+              Git merge is a Git command that combines changes from one branch into another. It integrates the histories of two branches and produces a new merge commit if necessary.
+            </p>
+            <a class="return" href="#top">
+                 <button type="button">
+                    Back to top
+                 </button>
+            </a> 
+        </div>
+
+
+        <div id="git-compare" class="container">
+            <h3>
+                Git Comparing Branches:
+            </h3>
+            <h4>
+                In Git, comparing usually means seeing the differences (diffs) between:
+            </h4>
+            <ul>
+                <li>Two branches</li>
+                <li>Two commits</li>
+                <li>The working directory vs the last commit</li>
+                <li>A file at different points in time</li>
+            </ul>
+            <h3>
+                Common Ways to "Compare" in Git:
+            </h3>
+            <h4>
+                1. 🔄 Compare Two Branches:
+            </h4>
+            <P>To see what’s different between main and feature:</P>
+            <div class="span">
+                git diff main..feature
+            </div>
+            <ul>
+                <li> Shows what’s in feature that’s not in main</li>
+                <li>Add --name-only to just see file names:</li>
+            </ul>
+            <div class="span">
+                git diff --name-only main..feature
+            </div>
+            <h4>
+                2.🕓 Compare Two Commits:
+            </h4>
+            <div class="span">
+                git diff <P>&lt;commit1&gt; &lt;commit2&gt;</P>
+            </div>
+            <p>Example:</p>
+            <div class="span">
+                git diff a1b2c3d e4f5g6h
+            </div>
+            <p>Shows what changed between two commit hashes.</p>
+            <h4>3. 📂 Compare Working Directory with Last Commit:</h4>
+            <div class="span">
+                git diff
+            </div>
+            <p>Shows what changed between two commit hashes.</p>
+            <h4>
+                 4. ✅ Compare Staged Changes with Last Commit:
+            </h4>
+            <div class="span">
+                git diff --cached
+            </div>
+            <p>or:</p>
+            <div class="span">
+                git diff --staged
+            </div>
+            <p>Shows what's been staged (git add) but not yet committed.</p>
+            <h4>
+               5. 🧾 Compare File Between Branches:
+            </h4>
+            <div class="span">
+                git diff main..feature -- path/to/file.txt
+            </div>
+            <h3>
+                Explanation of Compare in Git:
+            </h3>
+            <p>🔍 In Git, "compare" means identifying differences between two versions of your code — such as branches, commits, or files. This is essential for understanding what has changed, who made the changes, and why.</p>
+            <a class="return" href="#top">
+                 <button type="button">
+                    Back to top
+                 </button>
+            </a> 
+        </div>
+
+
+        <div id="git-branch" class="container">
+            <h3>
+                Git Branch:
+            </h3>
+            <p>The git branch command in Git is used to create, list, rename, and delete branches in your repository.</p>
+            <h3>
+                Typical Workflow:
+            </h3>
+            <h4>
+                1. Create a new branch:
+            </h4>
+            <div class="span">
+                Git Branch New-feature
+            </div>
+            <h4>
+                2. Switch to it:
+            </h4>
+            <div class="span">
+                git checkout new-feature
+            </div>
+            <h4>
+                3. Make changes, commit, and merge back when done:
+            </h4>
+            <div class="span">
+                <ol>
+                    <li>git checkout main</li>
+                   <li>git merge new-feature</li>
+            </ol>
+            </div>
+            <h3>
+                 What is Git branch?:
+            </h3>
+            <p>The git branch command is used to work with branches in Git.</p>
+            <p>A branch is like a separate workspace where you can make changes without affecting the main project. This is useful when you're working on:</p>
+            <ul>
+                <li>A new feature</li>
+                <li>A bug fix</li>
+                <li>An experiment</li>
+            </ul>
+            <a class="return" href="#top">
+                 <button type="button">
+                    Back to top
+                 </button>
+            </a> 
+        </div>
+
+
+         <div id="git-push" class="container">
+            <h3>
+            Git Push:
+        </h3>
+        <p>The git push command is used to upload your local Git commits to a remote repository (like GitHub, GitLab, or Bitbucket).</p>
+        <h3> What Does Git push Do?:
+        </h3>
+         <div class="span">
+                git push origin main
+            </div>
+        <h4>It tells Git:</h4>
+        <p>"Take my commits from the local main branch and send them to the main branch on the remote called origin."</p>
+        <h4>
+            In Short:
+        </h4>
+        <p>git push = Send your changes to the cloud (remote repo).</p>
+        <h3>Why Use Git push?:</h3>
+        <ul>
+            <li>Share your work with teammates</li>
+            <li>Back up your code to a remote server</li>
+            <li>Publish changes for deployment or collaboration</li>
+            <li>Submit contributions (e.g., after forking a repo)</li>
+        </ul>
+        <a class="return" href="#top">
+                 <button type="button">
+                    Back to top
+                 </button>
+            </a> 
+         </div>
+
+
+         <div id="git-branch-plus" class="container">
+            <h3>Git Branch Plus:</h3>
+            <p>A Git branch is used to list, create, rename, and delete branches in Git. A branch in Git represents an independent line of development, allowing you to work on features, bug fixes, or experiments without affecting the main codebase.</p>
+            <h3>Why Use git push?:</h3>
+            <ul>
+                <li>Share your work with others</li>
+                <li>Publish updates to a shared project</li>
+                <li>Deploy code (in some setups)</li>
+                <li>Back up your changes remotely</li>
+            </ul>
+            <h4>
+                Basic Syntax:
+            </h4>
+             <div class="span">
+                git push <remote> <branch>
+            </div>
+            <h4>Example:</h4>
+            <div class="span">
+                git push origin main
+            </div>
+            <p>This pushes your local main branch to the remote named origin.</p>
+            <a class="return" href="#top">
+                 <button type="button">
+                    Back to top
+                 </button>
+            </a> 
+         </div>
+
+
+        <div id="git-pull" class="container">
+            <h3>
+                Pull Request (PR) – Full Explanation:
+            </h3>
+            <p>A pull request is a collaboration feature on platforms like GitHub, GitLab, and Bitbucket that lets you:</p>
+            <p>request to merge changes from one branch (or fork) into another.</p>
+            <p>It is a safe way to review and discuss code before it becomes part of the main project.</p>
+            <h3>
+                What is a Pull Request?:
+            </h3>
+            <h4>
+                A pull request is:
+            </h4>
+            <ul>
+                <li>A proposal to merge your changes (commits) into a project</li>
+                <li>Usually created after you push a feature branch to a remote repository</li>
+                <li>Often used in team collaboration and open-source contributions</li>
+                <li>A proposal to merge your changes (commits) into a project</li>
+            </ul> 
+            <h3>
+                Pull Request Workflow:
+            </h3>
+            <h4>
+                1. Fork or clone the repository:
+            </h4>
+            <div class="span">
+                git clone https://github.com/example/project.git
+            </div>
+            <h4>
+                2. Create a new branch:
+            </h4>
+            <div class="span">
+                git checkout -b feature-login
+            </div>
+            <h4>
+                3. Make changes and commit:
+            </h4>
+            <div class="span">
+                <ol>
+                    <li>git add .</li>
+                    <li>git commit -m "Add login feature"</li>
+                </ol>
+            </div>
+            <h4>
+                4. Push your branch to remote:
+            </h4>
+            <div class="span">
+                git push origin feature-login
+            </div>
+            <h4>
+                5. Open a pull request:
+            </h4>
+            <div class="span">
+                <ol>
+                    <li>Go to the repository on GitHub/GitLab</li>
+                    <li>Click "Compare & pull request" (GitHub)</li>
+                    <li> Add a title and description</li>
+                    <li>Submit for review</li>
+                </ol>
+            </div>
+            <a class="return" href="#top">
+                 <button type="button">
+                    Back to top
+                 </button>
+            </a> 
+         </div>
+    </div>
+</body>
+</html>
+
